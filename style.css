@@ -1,5 +1,103 @@
+/*css varible */
 :root {
-grid-template: grid;
+    --main-redius: 5px;
+    --main-padding: 5px;    
+}
 
+body {
+    font-family:"inter",sans-serif
+
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    font-size: 12px;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8;
+    grid-template-areas: 
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar content1 content2 content3"
+        "sidebar footer footer footer"
+        ;
+    grid-gap: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+ 
+
+}
+
+nav {
+    background-color: rgb(47, 226, 208);
+    grid-area: nav;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+
+}
+
+main {
+    background-color: rgb(131, 167, 163);
+    grid-area: main;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+
+}
+
+#sidebar {
+    background-color: rgb(29, 209, 191);
+    grid-area: sidebar;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+
+}
+
+#content1 {
+    background-color: rgb(75, 129, 124);
+    grid-area: content1;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+
+}
+
+#content2 {
+    background-color: rgb(16, 155, 141);
+    grid-area: content2;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+
+}
+
+#content3 {
+    background-color: rgb(6, 97, 88);
+    grid-area: content3;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+    
+
+}
+footer {
+    background-color: rgb(70, 70, 67);
+    grid-area: footer;
+    border-radius: var(--main-redius);
+    padding-top: var(--main-padding);
+    
+}
+
+@media only screen and (max-width: 550PX) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "navbar"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+        ;
+    }
 
 }
